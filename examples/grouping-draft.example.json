@@ -1,0 +1,13 @@
+{
+  "groups": [
+    {
+      "group_id": "g01",
+      "title": "Example merged focus",
+      "source_kinds": [
+        "10",
+        "11"
+      ],
+      "rationale": "Synthetic same-topic example. Preserve distinct IDs, album variants, unavailable entries, and existing destination duplicates; exclude system kind 3."
+    }
+  ]
+}

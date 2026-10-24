@@ -1,0 +1,28 @@
+# Local runtime and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+# Credentials and generated configuration
+.env
+.env.*
+!.env.example
+private/
+secrets/
+token
+*.token
+.auth-status.json
+hermes-mcp-fragment.yaml
+# Personal exports, snapshots, covers and delivery packages
+outputs/
+exports/
+vendor/
+*.zip
+*.tar
+*.tar.gz
+*.bundle
+# Local editors
+.idea/
+.vscode/
