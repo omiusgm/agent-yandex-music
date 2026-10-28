@@ -1,0 +1,23 @@
+name: Идея / Feature request
+description: Какую задачу пользователя должна решить новая возможность
+title: "[Idea] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Задача пользователя / User problem
+      description: Что сейчас неудобно? Опишите результат, а не только название технологии.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Критерий готовности / Acceptance
+      description: Как проверить успех? Достаточно ли чтения или нужны изменения в аккаунте?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Уже существующие решения / Alternatives
+      description: Ссылки на инструменты и ограничения, без конфиденциальных данных.

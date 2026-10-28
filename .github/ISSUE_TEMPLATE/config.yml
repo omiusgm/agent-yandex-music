@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Начать с каталога / Start with the catalog
+    url: https://github.com/omiusgm/agent-ezh-catalog
+    about: Выбрать интеграцию, проверить платформу и передать инструкцию своему агенту

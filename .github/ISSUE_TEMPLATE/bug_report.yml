@@ -1,0 +1,32 @@
+name: Ошибка / Bug report
+description: Что не сработало и как это повторить без личных данных
+title: "[Bug] "
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Среда / Environment
+      description: ОС, клиент агента, версия или commit проекта. Без адресов аккаунтов и секретов.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Шаги и ожидаемый результат / Steps and expected result
+      description: Минимальный пример на искусственных данных; где остановилась настройка?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактический результат / Actual result
+      description: Обезличенная ошибка. Не вставляйте полный конфиг, токены, QR или личную переписку.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Перед отправкой / Before submitting
+      options:
+        - label: В отчёте нет секретов и личных данных / No secrets or personal data
+          required: true

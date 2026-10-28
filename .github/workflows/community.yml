@@ -1,0 +1,26 @@
+name: Community files
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Check contribution entry points
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          files = ['README.md', 'CONTRIBUTING.md', 'SECURITY.md', 'CODE_OF_CONDUCT.md',
+                   '.github/ISSUE_TEMPLATE/bug_report.yml', '.github/ISSUE_TEMPLATE/feature_request.yml',
+                   '.github/ISSUE_TEMPLATE/config.yml', '.github/pull_request_template.md']
+          for name in files:
+              p = Path(name)
+              assert p.is_file() and p.stat().st_size > 0, name
+          print('Community entry points OK')
+          PY
